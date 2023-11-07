@@ -41,18 +41,17 @@ form.addEventListener('submit', (e) => {
     // RESET THE FORM
     form.reset()
     // SET FOCUS BACK TO THE ID TEXT BOX
-
+    form.id.focus()
     // INCREMENENT THE NUMBER OF EMPLOYEES IN THE TABLE
 
 })
 
 // DELETE EMPLOYEE
+// CHECK AND SEE IF THE DELETE BUTTON WAS CLICKED
 employeeList.addEventListener('click', (e) => {
-    // CHECK AND SEE IF THE DELETE BUTTON WAS CLICKED
     // DISPLAY CONFIRMATION OF THE DELETE TO THE USER
     if (confirm('Are you sure you want to delete this Employee?')) {
-        // REMOVE THE SELECTED LI
-        deleteRow(e.target.parentElement.rowIndex)
+        deleteRow(e.target.parentElement.rowIndex);
     }
     
 })
